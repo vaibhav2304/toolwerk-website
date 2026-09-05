@@ -361,6 +361,3 @@ toolwerk-website/
 └── README.md
 ```
 
----
-
-Built with [Claude Code](https://claude.com/claude-code).
