@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TOOLWERK — Industrial Tools, Equipment & Machinery Supplier</title>
+<meta name="description" content="Supplier of industrial power tools, hand tools, welding machines, material handling and workshop machinery across India. Genuine brands, on-site service, GST invoicing.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css?v=1">
+</head>
+<body>
+<div id="site-header"></div>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="hero">
+  <div id="slides"></div>
+  <div class="wrap hero-inner"><div id="heroContent"></div></div>
+  <div class="hero-dots" id="dots"></div>
+  <div class="hero-strip"><div class="wrap" id="heroStrip"></div></div>
+</section>
+
+<!-- brand marquee -->
+<div class="marquee"><div class="track" id="marquee"></div></div>
+
+<!-- ================= CATEGORIES ================= -->
+<section class="section" id="categories">
+  <div class="wrap">
+    <div class="sec-head center" data-reveal>
+      <span class="kicker">Browse the catalogue</span>
+      <h2>Shop by Category</h2>
+      <p>Eight core categories, thirty-two product types, thousands of SKUs. Pick a category to drill down to exactly the tool or machine you need.</p>
+    </div>
+    <div class="cat-grid" id="catGrid"></div>
+    <div style="text-align:center;margin-top:34px" data-reveal>
+      <a class="btn btn-dark" href="products.html">View Full Catalogue →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURED RAIL ================= -->
+<section class="section dark">
+  <div class="wrap">
+    <div class="rail-head" data-reveal>
+      <div style="max-width:600px">
+        <span class="kicker">Special / Featured range</span>
+        <h2>Equipment Our Customers Buy Again</h2>
+        <p>Proven on Indian shop floors — stocked, serviced and supported by our own engineers.</p>
+      </div>
+      <div style="display:flex;gap:12px;align-items:center">
+        <a class="btn btn-ghost btn-sm" href="featured.html">See all featured</a>
+        <div class="rail-nav"><button data-dir="prev" aria-label="Previous">‹</button><button data-dir="next" aria-label="Next">›</button></div>
+      </div>
+    </div>
+    <div class="rail-wrap"><div class="rail" id="featRail"></div></div>
+  </div>
+</section>
+
+<!-- ================= USPs ================= -->
+<section class="section alt">
+  <div class="wrap">
+    <div class="sec-head" data-reveal><span class="kicker">Why buy from us</span>
+      <h2>A Supplier, Not a Listing Page</h2>
+      <p>Anyone can forward a catalogue. We hold stock, we test before dispatch, and our engineers show up when a machine stops.</p></div>
+    <div class="usp-grid" id="uspGrid"></div>
+  </div>
+</section>
+
+<!-- ================= STATS PARALLAX ================= -->
+<section class="parallax" id="statBand">
+  <div class="pbg" id="statBg"></div>
+  <div class="wrap">
+    <div style="max-width:620px" data-reveal>
+      <span class="kicker">Two decades on the floor</span>
+      <h2 style="color:#fff">Trusted by 1,200+ Industrial Buyers</h2>
+      <p style="color:#E7ECF1">From single-machine job shops to multi-plant manufacturers, buyers stay with us because the equipment lands on time and keeps running.</p>
+    </div>
+  </div>
+</section>
+<div class="stats" id="stats"></div>
+
+<!-- ================= ABOUT SPLIT ================= -->
+<section class="section">
+  <div class="wrap split">
+    <div class="media" data-reveal><img id="aboutImg" alt="Our workshop"><div class="stamp" id="aboutStamp"></div></div>
+    <div data-reveal data-d="1">
+      <span class="kicker">About us</span>
+      <h2 id="aboutTitle"></h2>
+      <div id="aboutBody"></div>
+      <ul class="ticks" id="aboutPoints"></ul>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn btn-dark" href="about.html">More about us</a>
+        <a class="btn btn-outline" href="services.html">Our services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NEW ARRIVALS RAIL ================= -->
+<section class="section alt">
+  <div class="wrap">
+    <div class="rail-head" data-reveal>
+      <div><span class="kicker">Fresh in stock</span><h2>Latest Additions</h2></div>
+      <div class="rail-nav"><button data-dir="prev" aria-label="Previous">‹</button><button data-dir="next" aria-label="Next">›</button></div>
+    </div>
+    <div class="rail-wrap"><div class="rail" id="newRail"></div></div>
+  </div>
+</section>
+
+<!-- ================= CTA BAND ================= -->
+<section class="parallax">
+  <div class="pbg" id="ctaBg"></div>
+  <div class="wrap"><div style="max-width:660px" data-reveal>
+    <span class="kicker">Talk to us</span>
+    <h2 id="ctaTitle" style="color:#fff"></h2>
+    <p id="ctaText" style="color:#E7ECF1"></p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#" data-enquire="">Send Your Requirement</a>
+      <a class="btn btn-ghost" id="ctaCall" href="#">📞 Call Now</a>
+    </div>
+  </div></div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head center" data-reveal><span class="kicker">Client feedback</span><h2>What Buyers Say</h2></div>
+    <div class="usp-grid" id="testis"></div>
+  </div>
+</section>
+
+<!-- ================= LEAD CAPTURE + MAP ================= -->
+<section class="section dark" id="enquiry">
+  <div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:stretch">
+    <div data-reveal>
+      <span class="kicker">Quick enquiry</span>
+      <h2>Tell Us What You Need</h2>
+      <p>Send the requirement, a drawing, or just a photo of the old part. Our team reverts with availability, options and pricing — usually within 4 working hours.</p>
+      <div id="homeOk" class="form-ok" hidden>✔ Thank you — enquiry logged. We will call you shortly.</div>
+      <form id="homeForm" class="form-grid">
+        <div class="field"><label>Name *</label><input name="name" required></div>
+        <div class="field"><label>Mobile *</label><input name="phone" required></div>
+        <div class="field"><label>Email</label><input type="email" name="email"></div>
+        <div class="field"><label>City</label><input name="city"></div>
+        <div class="field full"><label>Requirement *</label><textarea name="message" required placeholder="Product, quantity, specification, timeline…"></textarea></div>
+        <div class="field full"><button class="btn btn-primary btn-block">Submit Enquiry →</button></div>
+      </form>
+    </div>
+    <div data-reveal data-d="1" style="display:flex;flex-direction:column;gap:18px">
+      <div class="map-embed"><iframe id="mapFrame" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Our location"></iframe></div>
+      <div style="background:var(--ink-2);border:2px solid var(--ink-3);border-radius:4px;padding:20px">
+        <h3 style="color:#fff;margin-bottom:10px">Visit or call our counter</h3>
+        <p id="contactBlock" style="margin:0"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="assets/js/data.js?v=1"></script>
+<script src="assets/js/site.js?v=1"></script>
+<script>
+boot('home');
+const s=TW.s;
+
+/* Hero slider */
+const slides=s.heroSlides;
+$('#slides').innerHTML=slides.map((sl,i)=>`<div class="hero-slide ${i?'':'on'}"><div class="hero-bg" style="background-image:url('${sl.img}')"></div></div>`).join('');
+$('#dots').innerHTML=slides.map((_,i)=>`<button class="${i?'':'on'}" data-i="${i}" aria-label="Slide ${i+1}"></button>`).join('');
+let cur=0,timer;
+function paint(i){
+  cur=i; const sl=slides[i];
+  $$('.hero-slide').forEach((e,x)=>e.classList.toggle('on',x===i));
+  $$('#dots button').forEach((e,x)=>e.classList.toggle('on',x===i));
+  $('#heroContent').innerHTML=`
+    <span class="eyebrow">${esc(sl.kicker)}</span>
+    <h1>${sl.title}</h1>
+    <p class="lead">${esc(sl.text)}</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="products.html">Browse Catalogue →</a>
+      <a class="btn btn-ghost" href="#" data-enquire="">Get an Enquiry Callback</a>
+      <a class="btn btn-ghost" href="${telHref(s.phone)}">📞 ${esc(s.phone)}</a>
+    </div>`;
+}
+function go(i){paint((i+slides.length)%slides.length); clearInterval(timer); timer=setInterval(()=>go(cur+1),7000)}
+$$('#dots button').forEach(b=>b.onclick=()=>go(+b.dataset.i));
+go(0);
+
+$('#heroStrip').innerHTML=[
+  ['🏭','4,800+ SKUs in stock'],['🚚','48-hour pan-India dispatch'],
+  ['🛠','On-site service & AMC'],['📄','GST invoice + test certificates']
+].map(x=>`<div><b>${x[0]}</b><span>${x[1]}</span></div>`).join('');
+
+/* Marquee */
+const mq=s.marquee.map(b=>`<span>${esc(b)}</span>`).join('<span>◆</span>');
+$('#marquee').innerHTML=`<span>${mq}</span><span>${mq}</span>`;
+
+/* Categories */
+$('#catGrid').innerHTML=TW.cats.map((c,i)=>`
+  <a class="cat-card" data-reveal data-d="${i%4}" href="products.html?cat=${c.slug}">
+    <div class="ph"><img src="${c.img}" alt="${esc(c.name)}" loading="lazy"></div>
+    <div class="body">
+      <h3>${c.icon} ${esc(c.name)}</h3>
+      <div class="count">${TW.countIn(c.id)} products · ${c.subs.length} types</div>
+      <div class="subs">${c.subs.map(x=>esc(x.name)).join(' · ')}</div>
+      <div class="go">Explore range →</div>
+    </div></a>`).join('');
+
+/* Rails */
+$('#featRail').innerHTML=TW.prods.filter(p=>p.featured).map(cardHTML).join('');
+$('#newRail').innerHTML=TW.prods.slice().reverse().slice(0,8).map(cardHTML).join('');
+
+/* USPs */
+$('#uspGrid').innerHTML=s.usps.map((u,i)=>`<div class="usp" data-reveal data-d="${i%4}">
+  <div class="ic">${u.i}</div><h3>${esc(u.t)}</h3><p>${esc(u.d)}</p></div>`).join('');
+
+/* Stats + parallax images */
+$('#statBg').style.backgroundImage=`url('${s.heroSlides[1].img}')`;
+$('#ctaBg').style.backgroundImage=`url('${s.ctaBand.img}')`;
+$('#stats').innerHTML=s.stats.map(x=>`<div><b data-count="${esc(x.n)}">0</b><span>${esc(x.l)}</span></div>`).join('');
+
+/* About */
+$('#aboutImg').src=s.about.img;
+$('#aboutStamp').textContent=s.about.stamp;
+$('#aboutTitle').textContent=s.about.title;
+$('#aboutBody').innerHTML=s.about.body.split('\n\n').map(p=>`<p style="color:var(--steel)">${esc(p)}</p>`).join('');
+$('#aboutPoints').innerHTML=s.about.points.map(p=>`<li>${esc(p)}</li>`).join('');
+
+/* CTA band */
+$('#ctaTitle').textContent=s.ctaBand.title;
+$('#ctaText').textContent=s.ctaBand.text;
+$('#ctaCall').href=telHref(s.phone); $('#ctaCall').textContent='📞 '+s.phone;
+
+/* Testimonials */
+$('#testis').innerHTML=TW.pages.testimonials.map((t,i)=>`<div class="usp" data-reveal data-d="${i}">
+  <div class="ic">”</div><p style="font-size:.98rem;color:var(--ink)">${esc(t.t)}</p>
+  <p style="margin:12px 0 0"><b>${esc(t.n)}</b><br><span style="font-size:.82rem;color:var(--steel)">${esc(t.r)}</span></p></div>`).join('');
+
+/* Map + contact */
+$('#mapFrame').src=s.mapEmbed;
+$('#contactBlock').innerHTML=`${esc(s.address)}<br><br>
+  <a href="${telHref(s.phone)}" style="color:var(--amber);font-weight:700">📞 ${esc(s.phone)}</a> ·
+  <a href="${telHref(s.phone2)}" style="color:var(--amber);font-weight:700">${esc(s.phone2)}</a><br>
+  <a href="mailto:${esc(s.email)}" style="color:#fff">✉ ${esc(s.email)}</a><br>
+  <span style="color:var(--on-dark-mute)">${esc(s.hours)}</span>`;
+
+bindForm('#homeForm','Homepage Form','#homeOk');
+initMotion(); initRails();
+</script>
+</body>
+</html>

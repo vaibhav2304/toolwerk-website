@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact Us — TOOLWERK Industrial Tools & Equipment</title>
+<meta name="description" content="Call, WhatsApp, email or visit our counter. Enquiries answered within 4 working hours.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css?v=1">
+</head>
+<body>
+<div id="site-header"></div>
+<section class="page-head"><div class="wrap"><h1>Contact Us</h1>
+<p>Call the counter, WhatsApp a photo of the part, or send the requirement below. Enquiries are answered within 4 working hours on business days.</p></div></section>
+<div class="crumbs"><div class="wrap"><a href="index.html">Home</a> / <span>Contact</span></div></div>
+
+<section class="section tight"><div class="wrap">
+  <div class="usp-grid" id="ways"></div>
+</div></section>
+
+<section class="section alt"><div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:stretch">
+  <div data-reveal>
+    <span class="kicker">Send an enquiry</span><h2>Tell Us What You Need</h2>
+    <p style="color:var(--steel)">Include quantity, specification and delivery city if you know them — it gets you a firm quote faster.</p>
+    <div id="cOk" class="form-ok" hidden>✔ Thank you — your enquiry is logged. Our team will contact you shortly.</div>
+    <form id="cForm" class="form-grid">
+      <div class="field"><label>Name *</label><input name="name" required></div>
+      <div class="field"><label>Mobile *</label><input name="phone" required></div>
+      <div class="field"><label>Email</label><input type="email" name="email"></div>
+      <div class="field"><label>Company</label><input name="company"></div>
+      <div class="field"><label>City</label><input name="city"></div>
+      <div class="field"><label>Enquiry type</label>
+        <select name="type"><option>Product enquiry</option><option>Bulk / project supply</option>
+        <option>Service or AMC</option><option>Spare parts</option><option>Rate contract</option><option>Other</option></select></div>
+      <div class="field full"><label>Product / Requirement</label><input name="product" placeholder="e.g. 10 HP air compressor with 500L receiver"></div>
+      <div class="field full"><label>Message *</label><textarea name="message" required></textarea></div>
+      <div class="field full"><button class="btn btn-primary btn-block">Submit Enquiry →</button>
+        <p class="form-note">Your details stay with our sales team and are never shared.</p></div>
+    </form>
+  </div>
+  <div data-reveal data-d="1" style="display:flex;flex-direction:column;gap:18px">
+    <div class="map-embed" style="min-height:420px"><iframe id="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Location map"></iframe></div>
+    <div style="border:2px solid var(--ink);border-radius:4px;padding:22px;background:var(--paper)">
+      <h3>Registered office &amp; counter</h3>
+      <p id="addr" style="color:var(--steel);margin-bottom:10px"></p>
+      <p id="cInfo" style="margin:0"></p>
+    </div>
+  </div>
+</div></section>
+
+<div id="site-footer"></div>
+<script src="assets/js/data.js?v=1"></script>
+<script src="assets/js/site.js?v=1"></script>
+<script>
+boot('contact');
+const s=TW.s;
+$('#ways').innerHTML=[
+ ['📞','Call our counter',`<a href="${telHref(s.phone)}"><b>${esc(s.phone)}</b></a><br><a href="${telHref(s.phone2)}">${esc(s.phone2)}</a><br><span style="font-size:.85rem">${esc(s.hours)}</span>`],
+ ['💬','WhatsApp',`Send a photo or spec and get a reply on chat.<br><a href="${waHref(s.whatsapp)}"><b>Message us on WhatsApp</b></a>`],
+ ['✉','Email',`<a href="mailto:${esc(s.email)}"><b>${esc(s.email)}</b></a><br><span style="font-size:.85rem">Quotes within 4 working hours</span>`],
+ ['📍','Visit us',`${esc(s.address)}<br><span style="font-size:.85rem">GSTIN ${esc(s.gst)}</span>`]
+].map((w,i)=>`<div class="usp" data-reveal data-d="${i}"><div class="ic">${w[0]}</div><h3>${w[1]}</h3><p>${w[2]}</p></div>`).join('');
+$('#map').src=s.mapEmbed;
+$('#addr').textContent=s.address;
+$('#cInfo').innerHTML=`<a href="${telHref(s.phone)}" style="font-weight:700">📞 ${esc(s.phone)}</a> · 
+  <a href="mailto:${esc(s.email)}" style="font-weight:700">✉ ${esc(s.email)}</a><br>
+  <span style="color:var(--steel)">${esc(s.hours)} · GSTIN ${esc(s.gst)}</span>`;
+bindForm('#cForm','Contact Page','#cOk');
+initMotion();
+</script>
+</body></html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TOOLWERK — Admin Panel</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" href="assets/css/admin.css?v=1">
+</head>
+<body class="admin">
+
+<!-- LOGIN -->
+<div class="login-wrap" id="login">
+  <form class="login-card" id="loginForm">
+    <div class="logo"><span>T</span> TOOLWERK Admin</div>
+    <p class="hint">Sign in to manage products, categories, homepage content and enquiries.</p>
+    <div class="err hidden" id="loginErr">Wrong username or password.</div>
+    <div class="f"><label>Username</label><input id="u" autocomplete="username" value=""></div>
+    <div class="f"><label>Password</label><input id="p" type="password" autocomplete="current-password"></div>
+    <button class="b" style="width:100%;justify-content:center" type="submit">Log In</button>
+    <p class="hint" style="margin-top:14px">Default credentials: <b>admin</b> / <b>admin</b> — change them in Settings → Admin Access.</p>
+    <p class="hint"><a href="index.html">← Back to website</a></p>
+  </form>
+</div>
+
+<!-- PANEL -->
+<div class="ad-wrap hidden" id="panel">
+  <aside class="ad-side">
+    <div class="top"><i>T</i> TOOLWERK</div>
+    <nav id="nav"></nav>
+    <div class="sep"></div>
+    <nav><a href="index.html" target="_blank">🌐 View Website</a><a href="#" id="logout">⎋ Log Out</a></nav>
+  </aside>
+  <main class="ad-main">
+    <div class="ad-bar">
+      <b id="crumb">Dashboard</b>
+      <div class="sp">
+        <span style="color:var(--ad-mute);font-size:.82rem" id="savedAt"></span>
+        <a class="b sec sm" href="index.html" target="_blank">View site ↗</a>
+      </div>
+    </div>
+    <div class="ad-body" id="view"></div>
+  </main>
+</div>
+
+<div class="notice" id="notice"></div>
+<script src="assets/js/data.js?v=1"></script>
+<script src="assets/js/admin.js?v=1"></script>
+</body></html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Services — Installation, AMC, Calibration & Training | TOOLWERK</title>
+<meta name="description" content="Installation and commissioning, annual maintenance contracts, calibration, operator training and plant fit-out consulting.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css?v=1">
+</head>
+<body>
+<div id="site-header"></div>
+<section class="page-head"><div class="wrap"><h1>Services &amp; Support</h1>
+<p>Selling the machine is the easy part. Our service organisation is what keeps it running — installation, maintenance contracts, calibration and training, delivered by our own engineers.</p></div></section>
+<div class="crumbs"><div class="wrap"><a href="index.html">Home</a> / <span>Services</span></div></div>
+
+<section class="section"><div class="wrap">
+  <div class="usp-grid" id="svc"></div>
+</div></section>
+
+<section class="parallax">
+  <div class="pbg" id="sBg"></div>
+  <div class="wrap"><div style="max-width:640px" data-reveal>
+    <span class="kicker">Annual maintenance</span>
+    <h2 style="color:#fff">Put your equipment under contract</h2>
+    <p style="color:#E7ECF1">Scheduled preventive visits, priority breakdown response, spares at contract rates and a documented service history for your audits. Available for machinery, compressors, DG sets and lifting equipment.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#" data-enquire="AMC / Service Contract">Request an AMC Proposal</a>
+      <a class="btn btn-ghost" id="sCall" href="#">📞 Call Now</a>
+    </div>
+  </div></div>
+</section>
+
+<section class="section alt"><div class="wrap">
+  <div class="sec-head center" data-reveal><span class="kicker">How we work</span><h2>From Enquiry to Commissioning</h2>
+  <p>A predictable process, so procurement knows exactly what happens next and when.</p></div>
+  <div class="cat-grid" id="steps"></div>
+</div></section>
+
+<section class="section dark"><div class="wrap" style="max-width:760px;margin-inline:auto">
+  <div class="sec-head center" data-reveal><span class="kicker">Service request</span><h2>Book a Service Visit</h2>
+  <p>Machine down, or due for a preventive visit? Log it here and our service desk calls back with an engineer slot.</p></div>
+  <div id="svcOk" class="form-ok" hidden>✔ Service request logged. Our service desk will call you shortly.</div>
+  <form id="svcForm" class="form-grid" data-reveal>
+    <div class="field"><label>Name *</label><input name="name" required></div>
+    <div class="field"><label>Mobile *</label><input name="phone" required></div>
+    <div class="field"><label>Company</label><input name="company"></div>
+    <div class="field"><label>Machine / Equipment</label><input name="product" placeholder="Model or serial no."></div>
+    <div class="field full"><label>Nature of issue *</label><textarea name="message" required placeholder="Describe the fault, or the service due"></textarea></div>
+    <div class="field full"><button class="btn btn-primary btn-block">Raise Service Request →</button></div>
+  </form>
+</div></section>
+
+<div id="site-footer"></div>
+<script src="assets/js/data.js?v=1"></script>
+<script src="assets/js/site.js?v=1"></script>
+<script>
+boot('services');
+$('#svc').innerHTML=TW.pages.services.map((x,i)=>`<div class="usp" data-reveal data-d="${i%4}">
+  <div class="ic">${x.i}</div><h3>${esc(x.t)}</h3><p>${esc(x.d)}</p>
+  <a class="btn btn-outline btn-sm" style="margin-top:14px" href="#" data-enquire="${esc(x.t)}">Enquire</a></div>`).join('');
+const steps=[["01","Share requirement","Send a spec, drawing, photo or just a description. No format needed."],
+["02","Proposal in 4 hours","Availability, options, price and a realistic delivery date — in writing."],
+["03","Order & documentation","GST invoice, warranty papers, test certificates and foundation drawings where applicable."],
+["04","Delivery & commissioning","Dispatch, installation, trial run, operator handover and service schedule."]];
+$('#steps').innerHTML=steps.map((s,i)=>`<div class="cat-card" style="padding:24px" data-reveal data-d="${i}">
+  <div style="font-family:var(--font-head);font-size:2.6rem;color:var(--amber);line-height:1">${s[0]}</div>
+  <h3 style="margin-top:8px">${s[1]}</h3><p style="color:var(--steel);font-size:.92rem;margin:0">${s[2]}</p></div>`).join('');
+$('#sBg').style.backgroundImage=`url('${TW.s.heroSlides[1].img}')`;
+$('#sCall').href=telHref(TW.s.phone); $('#sCall').textContent='📞 '+TW.s.phone;
+bindForm('#svcForm','Service Request','#svcOk');
+initMotion();
+</script>
+</body></html>

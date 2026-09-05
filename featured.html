@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Featured & Special Products — TOOLWERK</title>
+<meta name="description" content="Our specially selected industrial equipment — flagship machines and best-selling tools with full service backup.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css?v=1">
+</head>
+<body>
+<div id="site-header"></div>
+<section class="page-head"><div class="wrap">
+  <h1>Featured &amp; Special Range</h1>
+  <p>The equipment we recommend first — chosen for build quality, spare-part availability and how they hold up in Indian operating conditions. Every item here is stocked or built to order with our own commissioning team.</p>
+</div></section>
+<div class="crumbs"><div class="wrap"><a href="index.html">Home</a> / <span>Featured Range</span></div></div>
+
+<section class="section">
+  <div class="wrap">
+    <div id="featByCat"></div>
+  </div>
+</section>
+
+<section class="parallax">
+  <div class="pbg" id="fBg"></div>
+  <div class="wrap"><div style="max-width:640px" data-reveal>
+    <span class="kicker">Bulk & project supply</span>
+    <h2 style="color:#fff">Fitting out a new line or plant?</h2>
+    <p style="color:#E7ECF1">Share your equipment list or drawings. We prepare a consolidated proposal with phased delivery, installation schedule and an annual rate contract for consumables.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#" data-enquire="Project / bulk requirement">Send Project Requirement</a>
+      <a class="btn btn-ghost" id="fCall" href="#">📞 Call Now</a>
+    </div>
+  </div></div>
+</section>
+
+<div id="site-footer"></div>
+<script src="assets/js/data.js?v=1"></script>
+<script src="assets/js/site.js?v=1"></script>
+<script>
+boot('featured');
+const feats=TW.prods.filter(p=>p.featured);
+const groups={};
+feats.forEach(p=>{(groups[p.cat]=groups[p.cat]||[]).push(p)});
+$('#featByCat').innerHTML=Object.keys(groups).map(cid=>{
+  const c=TW.cat(cid);
+  return `<div style="margin-bottom:52px">
+    <div class="rail-head" data-reveal>
+      <div><span class="kicker">${c.icon} ${esc(c.name)}</span><h2>${esc(c.name)} — Selected</h2>
+      <p style="color:var(--steel);max-width:60ch">${esc(c.desc)}</p></div>
+      <a class="btn btn-outline btn-sm" href="products.html?cat=${c.slug}">All ${esc(c.name)} →</a>
+    </div>
+    <div class="prod-grid">${groups[cid].map(cardHTML).join('')}</div>
+  </div>`;
+}).join('');
+$('#fBg').style.backgroundImage=`url('${TW.s.heroSlides[2].img}')`;
+$('#fCall').href=telHref(TW.s.phone); $('#fCall').textContent='📞 '+TW.s.phone;
+initMotion();
+</script>
+</body></html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Product Catalogue — TOOLWERK Industrial Tools & Equipment</title>
+<meta name="description" content="Browse power tools, hand tools, welding machines, material handling, workshop machinery, compressors, measuring instruments and safety equipment.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css?v=1">
+</head>
+<body>
+<div id="site-header"></div>
+
+<section class="page-head">
+  <div class="wrap">
+    <h1 id="catTitle">All Products</h1>
+    <p id="catDesc"></p>
+  </div>
+</section>
+<div class="crumbs"><div class="wrap"><a href="index.html">Home</a> / <a href="products.html">Products</a> / <span id="crumbNow"></span></div></div>
+
+<div class="wrap catalog">
+  <aside class="filters" id="filters"></aside>
+  <main>
+    <div class="toolbar">
+      <span class="count" id="count"></span>
+      <form class="search-box" id="searchForm">
+        <input id="q" placeholder="Search product, brand or SKU…" aria-label="Search products">
+        <button type="submit">🔍</button>
+      </form>
+      <select class="sel" id="sort" aria-label="Sort">
+        <option value="featured">Sort: Featured first</option>
+        <option value="az">Name A–Z</option>
+        <option value="za">Name Z–A</option>
+        <option value="brand">Brand</option>
+      </select>
+      <button class="btn btn-dark btn-sm mobile-filter-btn" id="openFilters">☰ Filters</button>
+    </div>
+    <div class="chips" id="chips"></div>
+    <div class="prod-grid" id="grid"></div>
+
+    <div style="margin-top:44px;background:var(--ink);color:#fff;border-radius:4px;padding:32px;display:flex;gap:24px;align-items:center;flex-wrap:wrap">
+      <div style="flex:1;min-width:260px">
+        <h3 style="color:#fff;margin-bottom:6px">Not listed? We still probably stock it.</h3>
+        <p style="color:var(--on-dark-mute);margin:0;font-size:.94rem">Only a portion of our 4,800+ SKUs are published online. Send us the specification and we will revert with availability and pricing.</p>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn btn-primary" href="#" data-enquire="">Send Requirement</a>
+        <a class="btn btn-ghost" id="catCall" href="#">📞 Call Now</a>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div id="site-footer"></div>
+<script src="assets/js/data.js?v=1"></script>
+<script src="assets/js/site.js?v=1"></script>
+<script>
+boot('products'); initCatalog();
+$('#catCall').href=telHref(TW.s.phone); $('#catCall').textContent='📞 '+TW.s.phone;
+</script>
+</body></html>

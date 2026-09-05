@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About Us — TOOLWERK Industrial Tools & Equipment</title>
+<meta name="description" content="Two decades supplying industrial tools, machinery and equipment to factories, contractors and institutions across India.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css?v=1">
+</head>
+<body>
+<div id="site-header"></div>
+<section class="page-head"><div class="wrap"><h1 id="ph1">About Us</h1><p id="phP"></p></div></section>
+<div class="crumbs"><div class="wrap"><a href="index.html">Home</a> / <span>About</span></div></div>
+
+<section class="section">
+  <div class="wrap split">
+    <div class="media" data-reveal><img id="aImg" alt="Workshop"><div class="stamp" id="aStamp"></div></div>
+    <div data-reveal data-d="1">
+      <span class="kicker">Our story</span>
+      <h2 id="aTitle"></h2>
+      <div id="aBody"></div>
+      <ul class="ticks" id="aPoints"></ul>
+      <a class="btn btn-primary" href="#" data-enquire="">Work with us</a>
+    </div>
+  </div>
+</section>
+
+<div class="stats" id="stats"></div>
+
+<section class="section alt">
+  <div class="wrap">
+    <div class="sec-head center" data-reveal><span class="kicker">Who we supply</span><h2>Industries We Serve</h2>
+      <p>Different floors, same expectation — equipment that arrives on time, works as specified and gets serviced when it doesn't.</p></div>
+    <div class="cat-grid" id="inds"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start">
+    <div data-reveal>
+      <span class="kicker">Common questions</span><h2>Frequently Asked</h2>
+      <p style="color:var(--steel)">Answers to what industrial buyers ask us most. Anything else — call us, we answer the phone.</p>
+      <a class="btn btn-dark" href="contact.html">Contact the team</a>
+    </div>
+    <div id="faqs" data-reveal data-d="1"></div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="assets/js/data.js?v=1"></script>
+<script src="assets/js/site.js?v=1"></script>
+<script>
+boot('about');
+const s=TW.s;
+$('#phP').textContent=s.tagline+' — supplied, installed and serviced across India since 2003.';
+$('#aImg').src=s.about.img; $('#aStamp').textContent=s.about.stamp; $('#aTitle').textContent=s.about.title;
+$('#aBody').innerHTML=s.about.body.split('\n\n').map(p=>`<p style="color:var(--steel)">${esc(p)}</p>`).join('');
+$('#aPoints').innerHTML=s.about.points.map(p=>`<li>${esc(p)}</li>`).join('');
+$('#stats').innerHTML=s.stats.map(x=>`<div><b data-count="${esc(x.n)}">0</b><span>${esc(x.l)}</span></div>`).join('');
+$('#inds').innerHTML=TW.pages.industries.map((i,n)=>`<div class="usp" data-reveal data-d="${n%4}">
+  <div class="ic">🏭</div><h3 style="font-size:1.02rem">${esc(i)}</h3>
+  <p>Tooling, machinery and consumables matched to this sector's duty cycles and compliance needs.</p></div>`).join('');
+$('#faqs').innerHTML=TW.pages.faqs.map(f=>`
+  <details style="border:2px solid var(--line);border-radius:4px;padding:16px 18px;margin-bottom:12px">
+    <summary style="font-weight:700;cursor:pointer;font-size:1rem">${esc(f.q)}</summary>
+    <p style="color:var(--steel);margin:10px 0 0">${esc(f.a)}</p></details>`).join('');
+initMotion();
+</script>
+</body></html>
